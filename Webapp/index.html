@@ -64,7 +64,11 @@
         <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
         <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
         <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
     </head>
+    <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+    <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+    <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
 
     <body id="afui">
 
@@ -74,35 +78,210 @@
         <div class="uwrap" id="content">
             <div class="upage vertical-col left panel" id="mainpage" data-header="none" data-footer="none">
                 <div class="card_grid widget uib_w_1 wrapping-col d-margins" data-uib="layout/card_grid" data-ver="0">
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_2" data-uib="layout/card" data-ver="0"></div>
+                    <div class="widget widget-container content-area vertical-col uib-card uib_w_2 d-margins section-dimension-10 cpad-1" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_20 d-margins icon clock" data-uib="app_framework/button" data-ver="1" id="tasks">Tasks</a>
+                        <section class="card-header widget-container content-area vertical-col"></section>
+                    </div>
                     <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_3" data-uib="layout/card" data-ver="0"></div>
                     <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_4" data-uib="layout/card" data-ver="0"></div>
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_5" data-uib="layout/card" data-ver="0"></div>
+                    <div class="widget widget-container content-area vertical-col uib-card uib_w_5 d-margins section-dimension-10 cpad-1" data-uib="layout/card" data-ver="0" id="settings">
+                        <a class="button widget uib_w_19 d-margins icon settings" data-uib="app_framework/button" data-ver="1" id="settings"></a>
+                        <section class="card-header widget-container content-area vertical-col"></section>
+                    </div>
                 </div>
-                <div class="card_grid widget uib_w_6 wrapping-col d-margins flex-basis-6" data-uib="layout/card_grid" data-ver="0">
 
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_8 section-dimension-8" data-uib="layout/card" data-ver="0">
-                        <div class="widget uib_w_18 d-margins" data-uib="media/text" data-ver="0">
-                            <div class="widget-container left-receptacle"></div>
-                            <div class="widget-container right-receptacle"></div>
-                            <div>
-                                <p>Status</p>
+                <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+                    <div class="col uib_col_7 col-0_12-12" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+                            <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+                                <div class="col uib_col_8 col-1_12-12" data-uib="layout/col" data-ver="0">
+                                    <div class="widget-container content-area vertical-col">
+
+                                        <a class="button widget uib_w_48 d-margins timeline style-5 style-89 icon clock" data-uib="app_framework/button" data-ver="1" id="timeline"></a><span class="uib_shim"></span>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
                             </div>
+                            <div class="card_grid widget uib_w_6 wrapping-col d-margins flex-basis-6" data-uib="layout/card_grid" data-ver="0">
+
+                                <div class="widget widget-container content-area vertical-col uib-card uib_w_9 section-dimension-9 cpad-1" data-uib="layout/card" data-ver="0">
+                                    <div class="widget uib_w_25 d-margins style-92" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>FINE :)</p>
+                                        </div>
+                                    </div>
+                                    <section class="card-header widget-container content-area vertical-col">
+                                        <div class="widget uib_w_18 d-margins style-96" data-uib="media/text" data-ver="0">
+                                            <div class="widget-container left-receptacle"></div>
+                                            <div class="widget-container right-receptacle"></div>
+                                            <div>
+                                                <p>Status</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div><a class="button widget uib_w_15 d-margins icon location" data-uib="app_framework/button" data-ver="1" id="locate">Locate</a><span class="uib_shim"></span>
                         </div>
                     </div>
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_9 section-dimension-9" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_15 d-margins icon location" data-uib="app_framework/button" data-ver="1" id="locate">Locate</a>
-                    </div>
+                    <span class="uib_shim"></span>
                 </div>
                 <div class="card_grid widget uib_w_10 wrapping-col d-margins flex-basis-10" data-uib="layout/card_grid" data-ver="0">
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_11 section-dimension-11" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_16 d-margins icon mail slate" data-uib="app_framework/button" data-ver="1" id="sms_1">SMS</a>
+                    <div class="widget widget-container content-area vertical-col uib-card uib_w_11 section-dimension-11 cpad-1" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_16 d-margins icon mail slate" data-uib="app_framework/button" data-ver="1" id="sms_1">SMS</a>
+                        <section class="card-header widget-container content-area vertical-col"></section>
                     </div>
                     <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_12 section-dimension-12" data-uib="layout/card" data-ver="0"></div>
                     <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_13 section-dimension-13" data-uib="layout/card" data-ver="0"></div>
-                    <div class="widget widget-container content-area vertical-col uib-card cpad-0 uib_w_14 section-dimension-14" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_17 d-margins icon phone slate" data-uib="app_framework/button" data-ver="1" id="Call">Call</a>
+                    <div class="widget widget-container content-area vertical-col uib-card uib_w_14 section-dimension-14 cpad-1" data-uib="layout/card" data-ver="0"><a class="button widget uib_w_17 d-margins icon phone slate" data-uib="app_framework/button" data-ver="1" id="Call">Call</a>
+                        <section class="card-header widget-container content-area vertical-col"></section>
                     </div>
                 </div>
+
+            </div>
+            <div class="upage vertical-col left panel" id="tasks_page_1" data-header="none" data-footer="none">
+                <div class="table-thing with-label widget uib_w_21 d-margins" data-uib="app_framework/checkbox_group" data-ver="1">
+                    <label class="narrow-control label-inline">Tasks</label>
+                    <div class="wide-control">
+                        <div class="widget uib_w_22" data-uib="app_framework/checkbox" data-ver="1">
+                            <input type="checkbox" id="af-checkbox-3">
+                            <label class="content-box" for="af-checkbox-3">Get out of bedroom</label>
+                        </div>
+                        <div class="widget uib_w_23" data-uib="app_framework/checkbox" data-ver="1">
+                            <input type="checkbox" id="af-checkbox-4">
+                            <label class="content-box" for="af-checkbox-4">Goto the washroom once</label>
+                        </div>
+                        <div class="widget uib_w_24" data-uib="app_framework/checkbox" data-ver="1">
+                            <input type="checkbox" id="af-checkbox-5">
+                            <label class="content-box" for="af-checkbox-5">etc</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                    <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+                            <div class="sbs-container widget uib_w_27 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                                <div class="leftContent widget-container">
+
+                                    <div class="table-thing with-label widget uib_w_28 d-margins" data-uib="app_framework/textarea" data-ver="1">
+                                        <textarea class="wide-control" placeholder="New Task" rows="3" wrap="soft"></textarea>
+                                    </div>
+                                </div>
+                                <div class="rightContent widget-container">
+
+                                    <div class="table-thing with-label widget uib_w_30 d-margins" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" type="date">
+                                    </div>
+                                </div>
+                            </div><a class="button widget uib_w_29 d-margins slate" data-uib="app_framework/button" data-ver="1">Add</a><span class="uib_shim"></span>
+                        </div>
+                    </div>
+                    <span class="uib_shim"></span>
+                </div>
+                <a class="button widget uib_w_32 d-margins icon left style-75" data-uib="app_framework/button" data-ver="1">Back</a>
+            </div>
+
+            <div class="uwrap" id="content">
+
+            </div>
+
+            <div class="upage vertical-col left panel" id="settings_page_1" data-header="none" data-footer="none">
+
+                <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                    <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col center">
+
+                            <div class="widget uib_w_35 d-margins style-60" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                    <p>Settings</p>
+                                </div>
+                            </div>
+                            <div class="widget uib_w_36 d-margins style-68" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                    <p>Notifications</p>
+                                </div>
+                            </div>
+                            <div class="table-thing with-label widget uib_w_37 d-margins" data-uib="app_framework/flip_switch" data-ver="1">
+                                <label class="narrow-control label-inline">Notiify by Text Message</label>
+                                <div class="wide-control">
+                                    <input type="checkbox" class="toggle" id="af-flipswitch-0" checked="checked">
+                                    <label for="af-flipswitch-0" data-off="No" data-on="Yes"><span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="table-thing with-label widget uib_w_38 d-margins" data-uib="app_framework/flip_switch" data-ver="1">
+                                <label class="narrow-control label-inline">Notify By Email</label>
+                                <div class="wide-control">
+                                    <input type="checkbox" class="toggle" id="af-flipswitch-1">
+                                    <label for="af-flipswitch-1" data-off="No" data-on="Yes"><span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="table-thing with-label widget uib_w_39 d-margins" data-uib="app_framework/flip_switch" data-ver="1">
+                                <label class="narrow-control label-inline">Bypass Volume Profile</label>
+                                <div class="wide-control">
+                                    <input type="checkbox" class="toggle" id="af-flipswitch-2" checked="checked">
+                                    <label for="af-flipswitch-2" data-off="No" data-on="Yes"><span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="widget uib_w_40 d-margins style-68" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                    <p>Permissions</p>
+                                </div>
+                            </div>
+                            <div class="widget uib_w_41 d-margins sss" data-uib="media/text" data-ver="0">
+                                <div class="widget-container left-receptacle"></div>
+                                <div class="widget-container right-receptacle"></div>
+                                <div>
+                                    <p>Currently, you're the only care giver for David. Would you like to add more care givers?</p>
+                                </div>
+                            </div>
+                            <div class="table-thing with-label widget uib_w_42 d-margins" data-uib="app_framework/input" data-ver="1">
+                                <input class="wide-control" placeholder="Add Email of additional person" type="text">
+                            </div>
+                            <div class="table-thing with-label widget uib_w_43 d-margins" data-uib="app_framework/input" data-ver="1">
+                                <input class="wide-control" placeholder="Add Phone # of additional person" type="text">
+                            </div>
+                            <div class="table-thing with-label widget uib_w_44 d-margins" data-uib="app_framework/select" data-ver="1">
+                                <label class="narrow-control label-top-left">Would you like to continue being a care giver to Daivd along side new person?</label>
+                                <select class="wide-control">
+                                    <option>Yes</option>
+                                    <option>No</option>
+                                </select>
+                            </div><a class="button widget uib_w_45 d-margins slate" data-uib="app_framework/button" data-ver="1">Add New Person</a><span class="uib_shim"></span>
+                        </div>
+                    </div>
+                    <span class="uib_shim"></span>
+                </div>
+
+                <a class="button widget uib_w_46 d-margins icon left" data-uib="app_framework/button" data-ver="1" id="Back-settings">Back</a>
+            </div>
+            <div class="upage vertical-col left panel" id="Heatmap_page_1" data-header="none" data-footer="none">
+                <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                    <div class="col uib_col_9 col-0_12-12" data-uib="layout/col" data-ver="0">
+                        <div class="widget-container content-area vertical-col">
+
+                            <div class="widget uib_w_47 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                <figure class="figure-align">
+                                    <img src="images/heatmap.jpg">
+                                    <figcaption data-position="bottom"></figcaption>
+                                </figure>
+                            </div><span class="uib_shim"></span>
+                        </div>
+                    </div>
+                    <span class="uib_shim"></span>
+                </div>
+                <a class="button widget uib_w_49 d-margins icon left" data-uib="app_framework/button" data-ver="1" id="TimelineBack">Back</a>
             </div>
         </div>
+
     </body>
 
 </html>

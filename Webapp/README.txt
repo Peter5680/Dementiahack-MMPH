@@ -1,1 +1,0 @@
-This is the web-app, for the care giver of the Dementia patient.

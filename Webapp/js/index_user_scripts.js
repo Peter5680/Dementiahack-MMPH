@@ -22,6 +22,56 @@
 
 
     });
+
+    
+        /* button  #settings */
+    $(document).on("click", "#settings", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#settings_page_1"); 
+    });
+    
+        /* button  #tasks */
+    $(document).on("click", "#tasks", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#tasks_page_1"); 
+    });
+    
+        /* button  Back */
+    $(document).on("click", ".uib_w_32", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#mainpage"); 
+    });
+    
+        /* button  Back */
+    $(document).on("click", ".uib_w_33", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#mainpage"); 
+    });
+    
+        /* button  #Back-settings */
+    $(document).on("click", "#Back-settings", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#mainpage"); 
+    });
+     
+             /* button  #timeline-settings */
+    $(document).on("click", "#TimelineBack", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#mainpage"); 
+    });
+     
+                  /* button  #timeline-settings */
+    $(document).on("click", "#timeline", function(evt)
+    {
+         /*global activate_page */
+         af.ui.loadContent("#Heatmap_page_1"); 
+    });
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
